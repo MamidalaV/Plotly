@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <style>
+    /* div {background-image: url('https://wallpapercave.com/wp/wp2563025.jpg')} */
+    div {background-color: #6495ED}
+    </style>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center" 
+      style="background-image: url('resources/unnamed.jpg');
+             background-position: center;
+             background-size: cover;">
+        <h1 style="background-color: #F0F8FF;">Belly Button Biodiversity Dashboard</h1>
+        <p style="color: #F0F8FF;">Use the interactive charts below to explore the dataset</p>
+      </div>
+    </div>
+    <p> <b>Roza is a biological researcher in a prominent microbiology laboratory. 
+      Many bacterial species are not well studied and many more remain unknown to science. 
+      Roza’s role is to discover and document these bacteria. In particular, Roza is interested in 
+      bacterial species that have ability to synthesize proteins that taste like beef. Her lab has partnered 
+      with “Improbable beef”, a food Startup, to research candidate species. Labs across the country have had 
+      success in synthesizing meat from algae, fungi and microorganisms found on plant roots. 
+      However, improbable beef is still searching for elusive bacteria that provides perfect taste. 
+      Roza has a hypothesis that there's a microorganism that can supply the next best taste 
+      and she believes it can be found quite close to home from bacteria found on the human body. 
+      The human body is a source of thousands of types of bacteria and different parts of the body 
+      harbor different species. Bacteria found in the gut are not the same species that are found on a 
+      person's eyelashes for example. Furthermore, between individuals the bacterial species may vary even 
+      in the same location. Roza hypothesizes that the ideal bacterial species to make synthetic beef may be 
+      found in the belly button or at least in someone’s bellybutton. To test your hypothesis, Roza has sampled 
+      the tables of people across the country to identify bacterial species that colonize our belly buttons. 
+      Each person's identity is anonymous. They’ve instead been assigned an ID. This dashboard can be accessed by both 
+      her research participants and fellow researchers. Those who participated in the study will 
+      be able to visit this website select their ID numbers to see which bacterial species live in their navels. </b></p>
+
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well">
+          <h5>Test Subject ID No.:</h5>
+          <!-- <select id="selDataset"></select> -->
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div id="bar"></div>
+        <p><b>This horizontal graph represents the top 10 bacteria cultures found. </b></p>
+      </div>
+      <div class="col-md-5">
+        <div id="gauge"></div>
+        <p><b>This gauge meter shows frequency of washing the individual's belly button. </b></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
+        <p><b>This bubble chart shows the bacteria cultures per sample. </b></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <!-- <script src="plots.js"></script> -->
+  <script src="charts.js"></script>
+  <!-- <script src="test.js"></script> -->
+</body>
+
+</html>
